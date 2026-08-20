@@ -1,9 +1,14 @@
 import pymysql as mysql
+import os
+from dotenv import load_dotenv
 
-user = "root"
-password = "root"       
-host = "localhost"      
-baseDatos = "tienda_adso" 
+load_dotenv()
+
+
+user = os.getenv('user')
+password = os.getenv('passaword')
+host = os.getenv('baseDatos')
+baseDatos = os.getenv('host')
 
 try:
     # Se crea la conexión y el cursor DENTRO del try
